@@ -6,6 +6,7 @@ class Personajes {
   serie = "Juego de Tronos";
   foto = "url";
   constructor(nombre, familia, edad) {
+    this.crearFicha();
     this.nombre = nombre;
     const characterName = document.getElementsByClassName("character__name");
     this.familia = familia;
@@ -29,6 +30,18 @@ class Personajes {
   }
   comunica() {
     return `Soy ${this.nombre}: `;
+  }
+  crearFicha() {
+    let itm = document.getElementsByClassName("character col");
+
+    let cln = itm[0].cloneNode(true);
+
+    const bloqueFichas = document.getElementsByClassName(
+      "characters-list row list-unstyled"
+    );
+    bloqueFichas[0].appendChild(cln);
+    itm = document.getElementsByClassName("character col");
+    itm[0].style.display = "flex";
   }
 }
 

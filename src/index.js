@@ -13,16 +13,29 @@ import Luchador from "./luchador.js";
 
 */
 
-const joffreyBaratheon = new Rey("Joffrey", "Lannister", 14, 1);
-
 let itm = document.getElementsByClassName("character col");
+itm[0].style.display = "none";
+
+const joffreyBaratheon = new Rey("Joffrey", "Lannister", 14, 1);
+const jaimeLannister = new Luchador("Jaime", "Lannister", 43, "Espada", 10);
+const daenerysTargaryen = new Luchador(
+  "Daenerys",
+  "Targaryen",
+  17,
+  "Dragones",
+  10
+);
+const tyrionLannister = new Asesor("Tyrion", "Lannister", 39, "Daenerys");
+const bronn = new Escudero("Bronn", "Ninguna", "40", "Jaime Lannister", "10");
+
+/*let itm = document.getElementsByClassName("character col");
 
 let cln = itm[0].cloneNode(true);
 
 const bloqueFichas = document.getElementsByClassName(
   "characters-list row list-unstyled"
 );
-bloqueFichas[0].appendChild(cln);
+bloqueFichas[0].appendChild(cln);*/
 
 /*document
   .getElementsByClassName("characters-list row list-unstyled")

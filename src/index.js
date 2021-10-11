@@ -13,17 +13,42 @@ import Luchador from "./luchador.js";
 
 */
 
-const joffreyBaratheon = new Rey("Joffrey Baratheon");
-const jaimeLannister = new Luchador("Jaime Lannister");
-const daenerysTargaryen = new Luchador("Daenerys Targaryen");
+const joffreyBaratheon = new Rey("Joffrey", "Lannister", 14, 1);
+
+let itm = document.getElementsByClassName("character col");
+
+let cln = itm[0].cloneNode(true);
+
+const bloqueFichas = document.getElementsByClassName(
+  "characters-list row list-unstyled"
+);
+bloqueFichas[0].appendChild(cln);
+
+/*document
+  .getElementsByClassName("characters-list row list-unstyled")
+  .appendChild(cln);*/
+
+/*const jaimeLannister = new Luchador(
+  "Jaime Lannister",
+  "Lannister",
+  43,
+  "Espada",
+  10
+);
+const daenerysTargaryen = new Luchador(
+  "Daenerys Targaryen",
+  "Targaryen",
+  17,
+  "Dragones",
+  10
+);
 const tyrionLannister = new Asesor(
   "Tyrion Lannister",
-  "vacio",
-  "vacio",
-  "vacio",
+  "Lannister",
+  39,
   "Daenerys"
 );
-const bronn = new Escudero("Bronn", "vacio", "vacio", "vacio", "Jaime");
+const bronn = new Escudero("Bronn", "Ninguna", "40", "Jaime Lannister", "10");
 
 const listaPersonajes = [
   joffreyBaratheon,
@@ -33,19 +58,4 @@ const listaPersonajes = [
   bronn,
 ];
 
-console.log(listaPersonajes);
-
-const comunicados = listaPersonajes
-  .filter((listaPersonajes) => listaPersonajes instanceof Luchador)
-  .map((listaPersonajes) => listaPersonajes.comunica());
-
-console.log(comunicados);
-
-for (let i = 0; i < listaPersonajes.length; i++) {
-  console.log(listaPersonajes[i].comunica());
-}
-
-jaimeLannister.morir();
-tyrionLannister.morir();
-
-console.log(listaPersonajes);
+console.log(listaPersonajes);*/

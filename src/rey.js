@@ -1,10 +1,17 @@
 import Personajes from "./personajes.js";
+import Atributos from "./Atributos.js";
 
 class Rey extends Personajes {
-  añosDeDeinado;
-  constructor(nombre, familia, edad, añosDeDeinado) {
+  anosDeDeinado;
+  constructor(nombre, familia, edad, anosDeDeinado) {
     super(nombre, familia, edad);
-    this.añosDeDeinado = añosDeDeinado;
+    this.anosDeDeinado = anosDeDeinado;
+    debugger;
+    let atributosRey = new Atributos(
+      this.personajeComponente,
+      "Años de reinado",
+      anosDeDeinado
+    );
   }
 
   comunica() {

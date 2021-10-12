@@ -1,9 +1,15 @@
 import Personajes from "./personajes.js";
+import Atributos from "./Atributos.js";
 
 class Asesor extends Personajes {
   constructor(nombre, familia, edad, personajeAlQueAsesora) {
     super(nombre, familia, edad);
     this.personajeAlQueAsesora = personajeAlQueAsesora;
+    let atributosAsesor = new Atributos(
+      this.personajeComponente,
+      "Personaje al que asesora",
+      personajeAlQueAsesora
+    );
   }
 
   comunica() {

@@ -47,6 +47,10 @@ class Personajes {
     estaMuerto.style.display = "inline-block";
     const estaVivo = this.personajeComponente.querySelector(".fa-thumbs-up");
     estaVivo.style.display = "none";
+    const estaMuertoFoto = this.personajeComponente
+      .getElementsByClassName("card character__card")[0]
+      .getElementsByTagName("img")[0];
+    estaMuertoFoto.style.transform = "rotate(180deg)";
   }
   comunica() {
     return `Soy ${this.nombre}: `;

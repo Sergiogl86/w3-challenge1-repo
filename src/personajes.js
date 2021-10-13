@@ -8,7 +8,6 @@ class Personajes {
   foto = "url";
   personajeComponente;
   constructor(nombre, familia, edad) {
-    debugger;
     this.crearFicha();
     this.nombre = nombre;
     const characterName =
@@ -39,7 +38,6 @@ class Personajes {
     botonMuere[1].addEventListener("click", () => this.morir());
   }
   morir() {
-    debugger;
     const cambioVida = () => (this.estado = "muerto");
     cambioVida();
     const estaMuerto =
@@ -92,7 +90,6 @@ class Personajes {
       "characters-list row list-unstyled"
     );
     this.personajeComponente = ficha;
-    debugger;
     bloqueFichas[0].append(ficha);
   }
 }

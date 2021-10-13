@@ -18,10 +18,24 @@ class Escudero extends Personajes {
       "Grado de pelotismo",
       gradoDePelotismo
     );
+    const botonComunica = this.personajeComponente.getElementsByClassName(
+      "character__action btn"
+    );
+
+    botonComunica[0].addEventListener("click", () => this.comunica());
   }
 
   comunica() {
-    return super.comunica() + "Soy un loser";
+    const comunicado = document.querySelector(".comunications");
+    comunicado.className += " on";
+    const comunicadoFrase = comunicado.querySelector(".comunications__text");
+    comunicadoFrase.innerHTML = `${super.comunica() + "Soy un loser"}`;
+    const establecerImagen = comunicado.getElementsByTagName("img")[0];
+    establecerImagen.src = `img/${this.nombre.toLowerCase()}.jpg`;
+    const desaparece = setTimeout(() => {
+      const timer = document.querySelector(".comunications");
+      timer.className = "comunications";
+    }, 2000);
   }
 }
 
